@@ -11,31 +11,28 @@ export class ServersComponent implements OnInit {
   serverName = '';
   userName = '';
   btnResetNameDisabled = true;
+  serverCreated = false;
 
   constructor() {
-    setTimeout(() => {
-      this.allowNewServer = true;
-    }, 2000);
+    this.allowNewServer = true;
   }
 
   ngOnInit() {}
 
   onCreateServer() {
-    this.serverCreationStatus =
-      'Server was created.  Name is ' + this.serverName;
+    console.log('test');
+    this.serverCreated = true;
+    this.serverCreationStatus = 'Server was created.  Name is ' + this.serverName;
   }
 
-  checkIfEmpty() {
-    if (this.userName === '') {
-      this.btnResetNameDisabled = true;
-    }
-  }
-
-  onClickResetName() {
-    this.userName = '';
-  }
-
-  // onUpdateServerName(event: any) {
-  //   this.serverName = (<HTMLInputElement>event.target).value;
+  // checkIfEmpty() {
+  //   if (this.userName === '') {
+  //     this.btnResetNameDisabled = true;
+  //   }
   // }
+
+  // onClickResetName() {
+  //   this.userName = '';
+  // }
+
 }
