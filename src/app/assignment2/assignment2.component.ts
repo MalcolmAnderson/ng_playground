@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Assignment2Component implements OnInit {
   showParagraph: boolean = true;
   numberOfClicks: number = 0;
-  logArray: string[] = [];
+  logArray: Date[] = [];
 
 
   constructor() { }
@@ -24,7 +24,7 @@ export class Assignment2Component implements OnInit {
   toggleVisible(): void {
     this.showParagraph = !this.showParagraph;
     this.numberOfClicks ++;
-    this.logArray.push(this.numberOfClicks.toString());
+    this.logArray.push(new Date());
   }
 
 }

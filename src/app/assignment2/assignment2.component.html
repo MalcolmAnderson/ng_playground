@@ -1,18 +1,20 @@
-<button
-  class = "btn btn-primary"
-  (click)="toggleVisible()">Display Details</button>
+<button class="btn btn-primary" (click)="toggleVisible()">
+  Display Details
+</button>
 
-<br>
+<br />
 <p *ngIf="numberOfClicks % 2 === 0">This is a semi blinking paragraph</p>
 
-<ul style="list-style-type: none">
-  <li
-    *ngFor="let entry of logArray"
-    [ngClass]='{addBackground: entry >= 5}'
-    >{{ entry }}</li>
-</ul>
+<!-- <ul style="list-style-type: none">
+  <li *ngFor="let entry of logArray"
+  [ngClass]="{ addBackground: entry >= 5 }">
+    {{ entry }}
+  </li>
+</ul> -->
 <div
-  *ngFor="let entry of logArray"
-  [ngStyle]="{backgroundColor: entry >=5 ? 'blue' : 'transparent'}"
-  [ngClass]="{'white-text': entry >=5}"
->{{ entry }}</div>
+  *ngFor="let entry of logArray; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{ 'white-text': i >= 4 }"
+>
+  {{ entry }}
+</div>
