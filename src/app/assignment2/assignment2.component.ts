@@ -17,7 +17,7 @@ export class Assignment2Component implements OnInit {
   }
 
   showBackgroundColor(): boolean {
-    //return this.numberOfClicks >= 5;
+    // return this.numberOfClicks >= 5;
     return false;
   }
 
