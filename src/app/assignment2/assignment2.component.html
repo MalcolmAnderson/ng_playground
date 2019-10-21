@@ -11,4 +11,8 @@
     [ngClass]='{addBackground: entry >= 5}'
     >{{ entry }}</li>
 </ul>
-
+<div
+  *ngFor="let entry of logArray"
+  [ngStyle]="{backgroundColor: entry >=5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': entry >=5}"
+>{{ entry }}</div>
