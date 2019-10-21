@@ -1,0 +1,14 @@
+<button
+  class = "btn btn-primary"
+  (click)="toggleVisible()">Display Details</button>
+
+<br>
+<p *ngIf="numberOfClicks % 2 === 0">This is a semi blinking paragraph</p>
+
+<ul style="list-style-type: none">
+  <li
+    *ngFor="let entry of logArray"
+    [ngClass]='{addBackground: entry >= 5}'
+    >{{ entry }}</li>
+</ul>
+
